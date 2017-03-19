@@ -3,7 +3,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <head> 
       <title> Adrene! </title>
-       <link rel="stylesheet" type="text/css" href="lab6.css">
+     
+
+       <link rel="stylesheet" type="text/css" href="index.css">
   </head>
 <body >
 
@@ -27,17 +29,18 @@ app.controller("myCtrl", function($scope) {
 });
 
 </script>
+
 <div class = "papa" >
         <div ng-app="myShoppingList" ng-controller="myCtrl">
-                <h1 style="color: #800000"> Adrene's Shoping List</h1>
+                <h1 class="head"> Adrene's Shoping List</h1>
                 <hr>
-                <ul style="color: darkmagenta; font-family: Comic Sans MS">
+                <ul class="list">
         <li ng-repeat="x in products">
             {{x}}
             <span ng-click="removeItem($index)">&times;</span>
         </li>
     </ul>
-    <input ng-model="addMe">
+    <input ng-model="addMe" class='add'>
     <button ng-click="addItem()">Add</button>
     <p>{{errortext}}</p>
 </div>
@@ -45,3 +48,5 @@ app.controller("myCtrl", function($scope) {
 
 </body>
 </html>
+
+
